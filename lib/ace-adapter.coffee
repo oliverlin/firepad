@@ -13,7 +13,7 @@ class firepad.ACEAdapter
     @ace.on 'blur', @onBlur
     @ace.on 'focus', @onFocus
     @aceSession.selection.on 'changeCursor', @onCursorActivity
-    @aceRange ?= (ace.require ? require)("ace/range").Range
+    @aceRange ?= ace.require("ace/range").Range
 
   grabDocumentState: ->
     @lastDocLines = @aceDoc.getAllLines()
